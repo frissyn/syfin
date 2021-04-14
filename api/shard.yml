@@ -1,0 +1,11 @@
+name: syfin-api
+version: 0.1.0
+
+authors:
+    - frissyn
+
+dependencies:
+    kemal:
+        github: kemalcr/kemal
+
+license: MIT
