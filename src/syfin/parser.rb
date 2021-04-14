@@ -17,11 +17,13 @@ module Syfin
 
         class ScriptOptions
             attr_accessor \
+                :limit,
                 :target,
                 :is_uri,
                 :verbose
 
             def initialize
+                self.limit = -1
                 self.is_uri = true
                 self.verbose = false
                 self.target = 'Syfins'
@@ -31,6 +33,7 @@ module Syfin
                 [
                     ARGV,
                     {
+                        limit: -1
                         target: target,
                         is_uri: is_uri,
                         verbose: verbose
@@ -42,10 +45,11 @@ module Syfin
                 parser.banner = 'Usage: syfin [options]'
                 parser.separator('')
                 parser.separator('Options:')
-
+                
                 is_uri_option?(parser)
                 target_option?(parser)
                 verbose_option?(parser)
+                set_limit_option?(parser)
 
                 parser.on_tail('-h', '--help', 'Displays this message.') do
                     puts parser
@@ -75,6 +79,12 @@ module Syfin
             def target_option?(parser)
                 parser.on('--target=TARGET', String, 'Target directory to download results.') do |v|
                     self.target = v
+                end
+            end
+
+            def set_limit_option?(parser)
+                parser.on('--limit=LIMIT', Integer, 'Limit the number of songs to donwnload.') do |v|
+                    self.limit = v
                 end
             end
         end
