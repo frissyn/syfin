@@ -13,7 +13,7 @@ TODO: Write usage instruction here.
 
 ### Examples
 
-TODO: Write links to example scripts.
+You can find a comprehensive list of exmaples and snippets [`here`](https://github.com/frissyn/syfin/blob/master/EXAMPLES.md).
 
 ### Contributing
 
