@@ -62,7 +62,7 @@ module Syfin
 
             def is_uri_option?(parser)
                 parser.on("--id", "Parse given value as ID, instead of URL.") do
-                    self.is_uri = true
+                    self.is_uri = false
                 end
             end
 

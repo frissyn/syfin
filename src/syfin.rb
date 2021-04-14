@@ -25,13 +25,23 @@ begin
     args, opts = Parser.parse(ARGV, Syfin::VERSION).finalize()
 
     if opts[:is_uri]
-        args[0] = URI.parse(args[0]).path.split("/")[-1]
+        target = URI.parse(args[0]).path.split("/")
+        args[0] = "#{target[-2]}s:#{target[-1]}"
+    else
+        unless /(tracks|playlists|albums):(.){22}/.match?(args[0])
+            Syfin::UI.puts(
+                "ParseError: Invalid Spotify ID format.".red,
+                to: $stderr
+            )
+            exit(1)
+        end
     end
 
     if opts[:verbose]
         puts ("✓ Parsed Options!".green)
-        puts args
+        puts args, opts
     end
 rescue OptionParser::ParseError => err
-    Syfin::UI.puts("ParseError: #{err.message}".red, to: $stderr); exit
+    Syfin::UI.puts("ParseError: #{err.message}".red, to: $stderr)
+    exit(1)
 end
