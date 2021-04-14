@@ -15,6 +15,22 @@ TODO: Write usage instruction here.
 
 TODO: Write links to example scripts.
 
-### Developement & Contributing
+### Contributing
 
-TODO: Write developement notes and contributing instruction here.
+1. Fork the repository: [`Fork`](https://github.com/frissyn/syfin/fork)
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create a new Pull Request! 🎉
+
+You can also re-create these steps with GitHub Desktop, Visual Studio Code, or whatever git version control UI you prefer.
+
+### Developement
+
+##### **CLI:**
+
+TODO: Write developement notes for CLI here.
+
+##### **API:**
+
+TODO: Write developement notes for API here.
