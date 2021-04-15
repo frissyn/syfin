@@ -33,7 +33,7 @@ module Syfin
                 [
                     ARGV,
                     {
-                        limit: -1
+                        limit: -1,
                         target: target,
                         is_uri: is_uri,
                         verbose: verbose
