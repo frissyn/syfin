@@ -2,6 +2,8 @@
 
 **S**potify **f**rom **Y**ouTube **In**staller, or **syfin** (pronounced [`siphon`](https://www.google.com/search?q=siphon+pronunciation&safe=active&ssui=on)), is a Command Line Application that searches YouTube for any given Spotify track, album, or playlist, and installs the best matching MP3s.
 
+[*This is a pet project that I'm not completely focused on, it might be a while before this is usable. :)*]
+
 
 ### Installation
 
